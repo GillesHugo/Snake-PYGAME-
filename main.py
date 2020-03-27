@@ -27,5 +27,6 @@ try:
 except:
     print("Exit error")
 
+finally:
     pygame.quit()
     sys.exit()
