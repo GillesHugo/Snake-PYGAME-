@@ -15,6 +15,11 @@ pygame.init()
 window = pygame.display.set_mode((screen_h,screen_w)) #window creation
 game = True
 
+
+grass = pygame.image.load("grass.png")
+
+
+
 try:
     while game:
         for event in pygame.event.get():
@@ -22,6 +27,10 @@ try:
                 game = False #end of the game
 
         window.fill(colors["black"])
+        for i in range (0,50):
+            for j in range (0, 32):
+                window.blit(grass, (i*16,j*16))
+                
         pygame.display.flip()
 
 except:
